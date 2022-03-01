@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi step form model</title>
+    <link rel="stylesheet" href="SCSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- 
+        defer =>for preventing script file to load before everthing else
+        is loaded (images, css, etc...) 
+    -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- ========= Main container ========== -->
+    <div class="container">
+            <!--========== header ============= -->
+        <header>
+            Sign up
+        </header>
+
+        <!-- =========== Progress bar ============ -->
+        <div class="progress-bar">
+            <div class="step">
+                <p>Name</p>
+                <div class="bullet" id="bullet1">
+                    <span>
+                        1
+                    </span>
+                </div>
+                <div class="check fa fa-check"></div>
+            </div>
+            <div class="step">
+                <p>Contact</p>
+                <div class="bullet" id="bullet2">
+                    <span>
+                        2
+                    </span>
+                </div>
+                <div class="check fa fa-check"></div>
+            </div>
+            <div class="step">
+                <p>Birth</p>
+                <div class="bullet" id="bullet3">
+                    <span>
+                        3
+                    </span>
+                </div>
+                <div class="check fa fa-check"></div>
+            </div>
+            <div class="step">
+                <p>Submit</p>
+                <div class="bullet" id="bullet4">
+                    <span>
+                        4
+                    </span>
+                </div>
+                <div class="check fa fa-check"></div>
+            </div>
+        </div>
+        <ul class="message"></ul>
+        <!--========== main ============= -->
+        <main>
+            <div class="form-outer">
+                <form>
+                    <!-- ============ Page (1) ================ -->
+                    <div class="page slidepage" id="page1">
+                        <div class="title">
+                            Basic Info:
+                        </div>
+                        <div class="field">
+                            <div class="label">
+                                First Name:
+                            </div>
+                            <input type="text" name="First name" placeholder="Ahmed" required>
+                        </div>
+
+                        <div class="field">
+                            <div class="label">
+                                Last Name:
+                            </div>
+                            <input type="text" name="Last name" placeholder="Elgaidi" required>
+                        </div>
+
+                        <div class="field">
+                            <button class="nextBtn">
+                                Next
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ============ Page (2) ================= -->
+                    <div class="page slidepage" id="page2">
+                        <div class="title">
+                            Contact Info:
+                        </div>
+
+                        <div class="field">
+                            <div class="label">
+                                Email Address:
+                            </div>
+                            <input type="text" name="Email address" placeholder="ahmed@gmail.com" required>
+                        </div>
+
+                        <div class="field">
+                            <div class="label">
+                                Phone Number:
+                            </div>
+                            <input type="number" name="Phone number" placeholder="01010939393" required>
+                        </div>
+
+                        <div class="field btns">
+                            <button class="prev-1 prev">
+                                Previous
+                            </button>
+                            <button class="next-1 next">
+                                Next
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ============== Page (3) ============== -->
+                    <div class="page slidepage" id="page3">
+                        <div class="title">
+                            Date Of Birth:
+                        </div>
+
+                        <div class="field">
+                            <div class="label">
+                                Date:
+                            </div>
+                            <input type="date" name="Date" required>
+                        </div>
+
+                        <div class="field">
+                            <div class="label">
+                                Gender:
+                            </div>
+                            <select>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="field btns">
+                            <button class="prev-2 prev">
+                                Previous
+                            </button>
+                            <button class="next-2 next">
+                                Next
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ============ Page (4) ================= -->
+                    <div class="page slidepage" id="page4">
+                        <div class="title">
+                            Login Details:
+                        </div>
+
+                        <div class="field">
+                            <div class="label">
+                                Username:
+                            </div>
+                            <input type="text" name="Username" placeholder="ahmed_ali" required>
+                        </div>
+
+                        <div class="field">
+                            <div class="label">
+                                Password:
+                            </div>
+                            <input type="password" name="Password" placeholder="your password"  required>
+                        </div>
+
+                        <div class="field btns">
+                            <button class="prev-3 prev">
+                                Previous
+                            </button>
+                            <button class="submit">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <b>
+            Developed by <br/>
+            Ahmed Elgaidi
+        </b>
+    </footer>
+</body>
+</html>

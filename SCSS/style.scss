@@ -1,0 +1,245 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f1f5f8;
+    color: #222;
+}
+.container {
+    width: 330px;
+    background: #fff;
+    text-align: center;
+    padding: 50px 35px 10px 35px;
+    border-radius: 20px;
+    margin: 100px 0;
+}
+
+header {
+    font-size: 35px;
+    font-weight: 600;
+    margin: 0  0 30px 0;
+}
+
+header  {
+    color: hsl(205, 96%, 45%)
+}
+
+.form-outer {
+    width: 100%;
+    overflow: hidden;
+}
+
+form {
+    display: flex;
+    width: 400%;
+}
+
+form .page {
+    width: 25%;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+form .page .title {
+    text-align: left;
+    font-size: 25px;
+    font-weight: 600;
+}
+form .page .field{
+    height: 45px;
+    width: 330px;
+    margin: 45px 0;
+    position: relative;
+    display: flex;
+}
+
+form .page .field .label {
+    position: absolute;
+    top: -30px;
+    font-weight: 500;
+}
+
+form .page .field input{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    font-size: 18px;
+    padding-left: 15px;
+}
+
+form .page .field select {
+    width: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+form .page .field button {
+    width: 100%;
+    height: calc(100% +5px); 
+    margin-top: -20px;
+    background: hsl(205, 96%, 45%);
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 2px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+form .page .field button:hover {
+    background: hsl(205, 86%, 17%);
+    color:  hsl(205, 78%, 60%);
+}
+
+form .page .btns button {
+    margin-top: -20px !important;
+}
+
+form .page .btns button.prev {
+    margin-right: 3px;
+}
+
+
+form .page .btns button.next {
+    margin-left: 3px;
+}
+
+.progress-bar {
+    display: flex;
+    margin:40px 0;
+}
+
+.progress-bar .step {
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+.progress-bar .step p {
+    font-size: 18px;
+    font-weight: 500;
+    // color: #000;
+    margin-bottom: 8px;
+    transition: .2s;
+}
+.progress-bar .step p.active {
+    color:hsl(205, 96%, 45%)!important;
+}
+
+.progress-bar .step .bullet {
+    height: 25px;
+    width: 25px;
+    border: 2px solid hsl(205, 78%, 60%);
+    border-radius: 50%;
+    font-size: 17px;
+    font-weight: 500;
+    display: inline-block;
+    line-height: 25px;
+    position: relative;
+    transition: .3s;
+}
+.progress-bar .step .bullet.active {
+    color: #fff;
+    background-color: hsl(205, 78%, 60%)
+}
+.progress-bar .step .bullet:hover {
+    background: hsl(205, 86%, 17%);
+    color:  hsl(205, 78%, 60%);
+}
+
+// for line connecting dots
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after {
+    position: absolute;
+    content: '';
+    bottom: 11px;
+    right: -56px;
+    height: 3px;
+    width: 55px;
+    background:hsl(205, 78%, 60%);
+}
+
+.progress-bar .step .bullet.active:after {
+    background:hsl(205, 78%, 60%);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 0.3s linear forwards;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+// to remove the line form the last bullet
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after {
+    display: none;
+}
+
+.progress-bar .step span {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 27px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.progress-bar .step .bullet.active span {
+    display: none;
+}
+
+.progress-bar .step .check {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.progress-bar .step .check.active {
+    display: block;
+    color:#fff;
+}
+
+footer {
+    position: absolute; 
+    top: 20%; 
+    left:10%;
+    color:hsl(205, 86%, 17%);
+    padding: 20px;
+    border: 2px solid hsl(205, 86%, 17%);
+    border-radius: 10%;
+    background-color: #fff;
+    transform: rotate(-20deg);
+}
+
+footer:hover {
+    transform: rotate(0deg);
+    background-color: hsl(205, 78%, 60%);
+}
+
+
+@media screen and (max-width: 1200px) {
+    footer{ 
+        display: none;
+    }
+}
